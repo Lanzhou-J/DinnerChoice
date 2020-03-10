@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Lanzhou Jiang"]
   spec.email         = ["lzjiang99@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = "dinner choice app gem"
+  spec.description   = "make dinner/lunch decisions easily"
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
