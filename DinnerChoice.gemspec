@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version       = DinnerChoice::VERSION
   spec.authors       = ["Lanzhou Jiang"]
   spec.email         = ["lzjiang99@gmail.com"]
-
+  spec.licenses      = ['MIT']
   spec.summary       = "dinner choice app gem"
   spec.description   = "make dinner/lunch decisions easily"
   spec.homepage      = "https://github.com/Lanzhou-J/DinnerChoice/blob/master/lib/DinnerChoice.rb"
