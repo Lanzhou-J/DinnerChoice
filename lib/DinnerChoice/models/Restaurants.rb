@@ -1,5 +1,5 @@
 class Restaurant
-  attr_reader :id, :name, :address, :rating, :average_price
+  attr_accessor :id, :name, :address, :rating, :average_price
   def initialize(id, name, address, rating, average_price)
     @id = id
     @name = name
@@ -11,4 +11,16 @@ class Restaurant
   def self.get_id(restaurants_repo)
     restaurants_repo.database.length + 1
   end 
+
+  def address
+    @address
+  end
+  
+  def rating
+    @rating
+  end
+
+  def average_price
+    @average_price
+  end
 end
