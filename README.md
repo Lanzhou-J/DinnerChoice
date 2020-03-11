@@ -1,8 +1,14 @@
 # DinnerChoice
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/DinnerChoice`. To experiment with that code, run `bin/console` for an interactive prompt.
+![avatar](docs/Dinner_choice.png)
 
-TODO: Delete this and the text above, and describe your gem
+This gem is designed to record information (e.g. name, address, average price) and user-reviews of restaurants. Users are able to add restaurants entry, display restaurants list, delete any restaurant and update information. More importantly, the gem can help users make quick lunch/dinner decisions. Users can "roll the dice" to get a random selection from the restaurants list.
+
+Have you ever spent too much time trying to make a decision as where to go for lunch or dinner? *The DinnerChoice gem is designed just for you!*
+
+
+
+
 
 ## Installation
 

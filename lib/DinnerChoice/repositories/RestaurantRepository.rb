@@ -7,11 +7,19 @@ class RestaurantRepository
   end
 
   def add(restaurant)
+    length_brfore = @database.length
     @database << restaurant
+    length_after = @database.length
+    count = length_after - length_brfore
+    return count
   end 
 
   def delete(delete_input)
+    length_brfore = @database.length
     @database.delete_at(delete_input)
+    length_after = @database.length
+    count = length_after - length_brfore
+    return count
   end
 
   def update(update_input, select_item, update_content)

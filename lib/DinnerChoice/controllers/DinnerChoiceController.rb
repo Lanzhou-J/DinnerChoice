@@ -1,5 +1,6 @@
 require_relative '../utils/capitalize'
 require_relative '../models/Restaurants'
+require_relative '../utils/waiting_dot'
 
 class Controller
   def initialize(restaurant_views, restaurant_repo) 
@@ -14,7 +15,12 @@ class Controller
   def create(results) 
     name, address, rating, average_price = capitalize(results)
     id = Restaurant.get_id(@restaurant_repo)
-    @restaurant_repo.add(Restaurant.new(id, name, address, rating, average_price))
+    count = @restaurant_repo.add(Restaurant.new(id, name, address, rating, average_price))
+    waiting()
+    puts
+    if count == 1
+      puts "New restaurant is successfully added!".colorize(:green)
+    end
   end 
 
   def new 
@@ -23,7 +29,12 @@ class Controller
   end 
 
   def delete_index(delete_index)
-    @restaurant_repo.delete(delete_index)
+    count = @restaurant_repo.delete(delete_index)
+    waiting()
+    puts
+    if count == -1
+      puts "The restaurant is successfully deleted!".colorize(:green)
+    end
   end
 
   def remove
@@ -33,6 +44,9 @@ class Controller
 
   def update_info(update_index, select_item, update_content)
     @restaurant_repo.update(update_index, select_item, update_content)
+    waiting()
+    puts
+    puts "The restaurant is successfully edited!".colorize(:green)
   end
 
   def rewrite
