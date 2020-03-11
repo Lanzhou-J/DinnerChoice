@@ -11,16 +11,4 @@ class Restaurant
   def self.get_id(restaurants_repo)
     restaurants_repo.database.length + 1
   end 
-
-  def address
-    @address
-  end
-  
-  def rating
-    @rating
-  end
-
-  def average_price
-    @average_price
-  end
 end

@@ -3,8 +3,8 @@ require_relative "../utils/line_separator"
 class RestaurantViews 
   def index(restaurant_database) 
     puts ('-' * 25).colorize(:light_blue)
-    restaurant_database.each do |restaurant|
-      puts "ID: #{restaurant.id}"
+    restaurant_database.each_with_index do |restaurant, index|
+      puts "ID: #{index + 1}"
       puts "Name: #{restaurant.name}"
       puts "Address: #{restaurant.address}"
       puts "Rating: #{restaurant.rating}"
@@ -32,16 +32,27 @@ class RestaurantViews
     [name, address, rating, average_price]
   end
 
+  def delete_command
+    puts 
+    puts "Which restaurant do you want to delete from the list? Please input the ID number:"
+    print "> "
+    delete_id = gets.chomp.to_i
+    delete_index = delete_id - 1
+    return delete_index
+  end
+
   def menu_list()
     puts 'main menu'.upcase.colorize(:light_yellow)
     puts '1. Create a new restaurant entry'
     puts '2. Display or search restaurants by key words'
-    puts '3. Make a choice! (random generator)'
-    puts '4. Exit (or input "exit")'
+    puts '3. Delete an existing entry'
+    puts '4. Update info of an existing entry'
+    puts '5. Make a choice! (random generator)'
+    puts '6. Exit (or input "exit")'
     puts
     print 'Please select from the ' 
     print 'MAIN MENU '.colorize(:light_yellow)
-    puts '(select numbers 1 to 4):'
+    puts '(select numbers 1 to 6):'
     print '> '
     user_selection = gets.strip.downcase
   end

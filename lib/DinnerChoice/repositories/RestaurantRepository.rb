@@ -7,4 +7,9 @@ class RestaurantRepository
   def add(restaurant)
     @database << restaurant
   end 
+
+  def delete(delete_input)
+    @database.delete_at(delete_input)
+  end
+
 end 
