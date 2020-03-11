@@ -21,6 +21,7 @@ def menu_select(restaurant_controller)
       restaurant_controller.remove
     elsif user_selection == '4' || user_selection == '4.'
       puts 'Update info of an existing entry:'.colorize(:green)
+      restaurant_controller.rewrite
       # restaurant_controller.update
     elsif user_selection == '5' || user_selection == '5.'
       puts 'Make a choice! (random generator):'.colorize(:green)

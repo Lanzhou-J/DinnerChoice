@@ -8,7 +8,7 @@ class RestaurantViews
       puts "Name: #{restaurant.name}"
       puts "Address: #{restaurant.address}"
       puts "Rating: #{restaurant.rating}"
-      puts "Average Price: #{restaurant.average_price}"
+      puts "Average Price: $#{restaurant.average_price}"
       puts ('-' * 25).colorize(:light_blue)
       sleep 0.1
     end 
@@ -39,6 +39,21 @@ class RestaurantViews
     delete_id = gets.chomp.to_i
     delete_index = delete_id - 1
     return delete_index
+  end
+
+  def update_command
+    puts 
+    puts "Which restaurant do you want to edit? Please input the ID number:"
+    print "> "
+    update_id = gets.chomp.to_i
+    update_index = update_id - 1
+    puts "Which feature do you want to edit? Please select from name/address/rating/price:"
+    print "> "
+    select_item = gets.chomp.downcase
+    puts "Please input new content:"
+    print "> "
+    update_content = gets.chomp
+    [update_index, select_item, update_content]
   end
 
   def menu_list()

@@ -31,7 +31,15 @@ class Controller
     delete_index(remove_index)
   end
 
+  def update_info(update_index, select_item, update_content)
+    @restaurant_repo.update(update_index, select_item, update_content)
+  end
 
+  def rewrite
+    update_array = @restaurant_views.update_command
+    update_info(update_array[0], update_array[1], update_array[2])
+  end
+  
   def menu_list
     @restaurant_views.menu_list
   end
