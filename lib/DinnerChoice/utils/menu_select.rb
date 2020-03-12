@@ -8,8 +8,6 @@ def menu_select(restaurant_controller)
  
 
   while user_selection != '6' && user_selection != '6.'&& user_selection != 'exit'
-  # print '> '
-  # user_selection = gets.strip.downcase
     if user_selection == '1' || user_selection == '1.'
       puts 'Create a new restaurant entry:'.colorize(:green)
       restaurant_controller.new
@@ -22,7 +20,6 @@ def menu_select(restaurant_controller)
     elsif user_selection == '4' || user_selection == '4.'
       puts 'Update info of an existing entry:'.colorize(:green)
       restaurant_controller.rewrite
-      # restaurant_controller.update
     elsif user_selection == '5' || user_selection == '5.'
       puts 'Make a choice! (random generator):'.colorize(:green)
       restaurant_controller.dice

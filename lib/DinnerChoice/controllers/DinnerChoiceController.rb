@@ -15,8 +15,7 @@ class Controller
 
   def create(results) 
     name, address, rating, average_price = capitalize(results)
-    id = Restaurant.get_id(@restaurant_repo)
-    count = @restaurant_repo.add(Restaurant.new(id, name, address, rating, average_price))
+    count = @restaurant_repo.add(Restaurant.new(name, address, rating, average_price))
     waiting()
     puts
     if count == 1
