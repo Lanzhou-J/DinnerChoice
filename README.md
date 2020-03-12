@@ -2,12 +2,7 @@
 
 ![avatar](docs/Dinner_choice.png)
 
-### R3 Attribution to referenced sources
 
-* https://undraw.co/illustrations
-* https://github.com/harrisonmalone/harrisons-food-app
-* https://rubygems.org/gems/colorize
-* https://www.bustle.com/articles/157828-5-signs-you-might-have-decidophobia-or-fear-of-making-decisions
 
 ### R4 Link to source control repository
 
@@ -172,3 +167,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Lanzho
 ## Code of Conduct
 
 Everyone interacting in the DinnerChoice project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/DinnerChoice/blob/master/CODE_OF_CONDUCT.md).
+
+## Reference
+
+* Vector Illustration https://undraw.co/illustrations
+* An introduction of decidophobia https://www.bustle.com/articles/157828-5-signs-you-might-have-decidophobia-or-fear-of-making-decisions
