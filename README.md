@@ -2,13 +2,22 @@
 
 ![avatar](docs/Dinner_choice.png)
 
-#### R5 Statement of purpose and scope
+##### R3 Attribution to referenced sources
+
+* https://undraw.co/illustrations
+* https://github.com/harrisonmalone/harrisons-food-app
+
+##### R4 Link to source control repository
+
+* https://github.com/Lanzhou-J/DinnerChoice
+
+##### R5 Statement of purpose and scope
 
 This gem is designed to record information (e.g. name, address, average price) and user-reviews of restaurants. Users are able to add restaurants entry, display restaurants list, delete any restaurant and update information. More importantly, the gem can help users make quick lunch/dinner decisions. Users can "roll a dice" to get a random selection from the restaurants list.
 
 Have you ever spent too much time trying to make a decision as where to go for lunch or dinner? No more "decidophobia", no more time-wasting...*The DinnerChoice gem is designed just for you!*
 
-#### R6 Features:
+##### R6 Features:
 * Create your resaurants collections.
 
 * View name, address and price of restaurants -- information that you need to choose a restaurant for dine out.
@@ -20,22 +29,26 @@ Have you ever spent too much time trying to make a decision as where to go for l
 
 * Make quick decisions.
 
-##### R3 Attribution to referenced sources
+##### R7 Outline of user interaction and experience
 
-* https://undraw.co/illustrations
-* https://github.com/harrisonmalone/harrisons-food-app
+ * The user will find out how to interact with the terminal app by reading the contents of "<font color="#dddd00">MAIN MENU</font>". Then users can select from the main menu (input number, select from 1 to 6). By doing so, they can choose to use each feature.
 
-##### R4 Link to source control repository
+ ```
+MAIN MENU
+1. Create a new restaurant entry
+2. Display or search restaurants by key words
+3. Delete an existing entry
+4. Update info of an existing entry
+5. Make a choice! (random generator)
+6. Exit (or input "exit")
 
-* https://github.com/Lanzhou-J/DinnerChoice
+Please select from the MAIN MENU (select numbers 1 to 6):
+> 
+```
 
 ##### R8 Diagram of the control flow
 
 ![avatar](docs/Activity_Diagram.png)
-
-
-
-
 
 ## Installation
 
@@ -65,12 +78,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-
-
 Bug reports and pull requests are welcome on GitHub at https://github.com/Lanzhou-J/DinnerChoice. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/DinnerChoice/blob/master/CODE_OF_CONDUCT.md).
-
-
-
 
 ## Code of Conduct
 
