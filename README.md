@@ -24,14 +24,18 @@ Have you ever spent too much time trying to make a decision as where to go for l
 With this app, you will be able to easily record, rate and compare different restaurants. When time is limited, or you are with lots of friends with different opinions and it is just too hard to decide your next dine out destination, just take a leap of faith and let the app make the decision for you.
 
 ### R6 Features:
-* Create your resaurants collections.
+* Ascii art text banner in terminal header.
+
+* Create your resaurants collections. <br>
+(After adding a new entry, the added restaurant will be appended to the bottom of the list with a new automatically generated ID.)
 
 * View name, address and price of restaurants -- information that you need to choose a restaurant for dine out.
 
 * Rate and review restaurants that you have been visited before.
 * Update restaurants' information easily.
 
-* Delete any restaurant from you list.
+* Delete any restaurant from you list. <br>
+(The ID of the restaurants in the list will automatically changed according to the latest order.)
 
 * Make quick decisions.
 
@@ -52,6 +56,12 @@ Please select from the MAIN MENU (select numbers 1 to 6):
 > 6
 See you next time!
 ```
+
+* Error handling: when input wrong selection (e.g. '7', '9' or other numbers/letters), the app will output an error message an ask the user to select from the menu again.
+```
+Sorry, I don't understand. Please select from 1 to 6.
+```
+
 ##### 1. Create new entry: 
 * After selecting "1" (or "1."). The user will be aksed to input the name (brand), address, rating and money usually spent(unit: AUD) of the restaurant (e.g. name:"Pappa Rich", address:"Southern cross station", rating:"3.5", average price:"9")
 ```
@@ -92,7 +102,6 @@ Rating: 4
 Average Price: $17
 -------------------------
 ```
-* After adding a new entry, the added restaurant will be appended to the bottom of the list with a new automatically generated ID.
 
 ##### 3. Delete an existing entry
 * The app will ask the user to select which restaurant to delete from the list (by selecting their ID).
@@ -100,7 +109,7 @@ Average Price: $17
 Which restaurant do you want to delete from the list? Please input the ID number:
 > 
 ```
-* After deleting an existing entry, the ID of restaurants will automatically changed according to the latest order. The app will calculate if the list count has decreased by 1, if yes, then output a message telling users that the entry has been successfully deleted:
+* After deleting an existing entry, the app will calculate if the list count has decreased by 1, if yes, then output a message telling users that the entry has been successfully deleted:
 ```
 > > > > > > > > > > > > > > > > > > 
 The restaurant is successfully deleted!
@@ -120,6 +129,7 @@ The restaurant is successfully edited!
 
 ##### 5. Make a choice!
 * Once "Make a choice" function is selected, the app will randomly select a restaurant from the current restaurants list. The restaurant will then be displayed with all the information.
+
 
 ### R8 Diagram of the control flow
 

@@ -24,7 +24,7 @@ def menu_select(restaurant_controller)
       puts 'Make a choice! (random generator):'.colorize(:green)
       restaurant_controller.dice
     else
-      puts 'Sorry, I don\'t understand. Please select from 1 to 5.'
+      puts "Sorry, I don\'t understand. Please select from 1 to 6, or input 'exit'."
     end 
     line_separator()
     user_selection = restaurant_controller.menu_list
