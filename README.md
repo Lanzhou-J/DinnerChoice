@@ -2,8 +2,6 @@
 
 ![avatar](docs/Dinner_choice.png)
 
-
-
 ### Source control repository
 
 * https://github.com/Lanzhou-J/DinnerChoice
@@ -20,6 +18,7 @@ With this app, you will be able to easily record, rate and compare different res
 
 ### Features:
 * Ascii art text banner in terminal header.
+![avatar](docs/Ascii_art_banner.png)
 
 * Create your resaurants collections. <br>
 (After adding a new entry, the added restaurant will be appended to the bottom of the list with a new automatically generated ID.)
@@ -128,7 +127,7 @@ The restaurant is successfully edited!
 
 ### Diagram of the control flow
 
-![avatar](docs/Activity_Diagram.png)
+![avatar](docs/Plan_UML_Chart.png)
 
 ### Implementation plan
 Please refer to my [Trello board][board].
@@ -138,6 +137,16 @@ Please refer to my [Trello board][board].
 ### Help documentation
 
 ## Installation
+
+1. Install ruby:
+
+* You need to install ruby to run this app. To verify you have ruby installed on your machine run:
+```
+ruby -v
+```
+* if you get no result from this command ruby isn't installed. There are many ways to install ruby but i recommend using rbenv.
+
+2. ...
 
 Add this line to your application's Gemfile:
 

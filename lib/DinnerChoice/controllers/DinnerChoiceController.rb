@@ -83,17 +83,23 @@ class Controller
   end
 
   def dice
-    puts
-    waiting()
-    sleep 0.5
-    print "    ......".colorize(:green)
-    sleep 0.5
-    print "Dice rolling".colorize(:green)
-    sleep 0.5
-    puts "......".colorize(:green)
-    sleep 0.5
-    waiting()
-    selected_restaurant = roll_dice(@restaurant_repo.database)
-    @restaurant_views.index(selected_restaurant)
+    if @restaurant_repo.database == []
+      puts 
+      puts "List is empty...There is nothing to choose from!".colorize(:red)
+      puts "Select 1 if you want to add a new entry."
+    else
+      puts
+      waiting()
+      sleep 0.5
+      print "    ......".colorize(:green)
+      sleep 0.5
+      print "Dice rolling".colorize(:green)
+      sleep 0.5
+      puts "......".colorize(:green)
+      sleep 0.5
+      waiting()
+      selected_restaurant = roll_dice(@restaurant_repo.database)
+      @restaurant_views.index(selected_restaurant)
+    end
   end
 end
