@@ -2,22 +2,28 @@
 
 ![avatar](docs/Dinner_choice.png)
 
-#### R3 Attribution to referenced sources
+### R3 Attribution to referenced sources
 
 * https://undraw.co/illustrations
 * https://github.com/harrisonmalone/harrisons-food-app
+* https://rubygems.org/gems/colorize
+* https://www.bustle.com/articles/157828-5-signs-you-might-have-decidophobia-or-fear-of-making-decisions
 
-#### R4 Link to source control repository
+### R4 Link to source control repository
 
 * https://github.com/Lanzhou-J/DinnerChoice
 
-#### R5 Statement of purpose and scope
+### R5 Statement of purpose and scope
 
-This gem is designed to record information (e.g. name, address, average price) and user-reviews of restaurants. Users are able to add restaurants entry, display restaurants list, delete any restaurant and update information. More importantly, the gem can help users make quick lunch/dinner decisions. Users can "roll a dice" to get a random selection from the restaurants list.
+This gem (terminal app) is designed to record information (e.g. name(brand), address, average price) and user-reviews of different restaurants. Users are able to add restaurants entry, display restaurants in a list format, delete any restaurant and update their information. Users can rate the restaurant on a scale of 1-5, 1 being the lowest(poor), 5 being the highest(great). Moreover, the app can help users make quick lunch/dinner decisions (or help users reach a consensus easily). Users can "roll a dice" to get a random selection from the up-to-date restaurants list.
 
-Have you ever spent too much time trying to make a decision as where to go for lunch or dinner? No more "decidophobia", no more time-wasting...*The DinnerChoice gem is designed just for you!*
+With the progression of human civillization in this internet era, modern people are facing more and more choices (especially food choices !). Sometimes I even felt like I was drowning in infinite choices everyday. The original intention of designing this app is to help the people of modern fast-paced life to save time wasted on “making decisions on what to eat” and devote limited time and energy to more valuable things, such as reading, studying, writing ... (Or practice programming!)
 
-#### R6 Features:
+Have you ever spent too much time trying to make a decision as where to go for lunch or dinner? Have you ever felt that making decisions inspires intense anxiety and relied on others to make decisions for you? Have you ever argued with your partner over which restaurant to choose for a romantic evening? No more "decidophobia", no more time-wasting...**The DinnerChoice app is designed just for you!**
+
+With this app, you will be able to easily record, rate and compare different restaurants. When time is limited, or you are with lots of friends with different opinions and it is just too hard to decide your next dine out destination, just take a leap of faith and let the app make the decision for you.
+
+### R6 Features:
 * Create your resaurants collections.
 
 * View name, address and price of restaurants -- information that you need to choose a restaurant for dine out.
@@ -29,7 +35,7 @@ Have you ever spent too much time trying to make a decision as where to go for l
 
 * Make quick decisions.
 
-#### R7 Outline of user interaction and experience
+### R7 Outline of user interaction and experience
 
  * The user will find out how to interact with the terminal app by reading the contents of "<font color="#dddd00">MAIN MENU</font>". Then users can select from the main menu (input number, select from 1 to 6). By doing so, they can choose to use each feature. After executing a function, the main menu list will display again and ask the user to select again. User can leave the app by inputing '6' (or '6.', 'exit').
 
@@ -115,10 +121,13 @@ The restaurant is successfully edited!
 ##### 5. Make a choice!
 * Once "Make a choice" function is selected, the app will randomly select a restaurant from the current restaurants list. The restaurant will then be displayed with all the information.
 
-
-#### R8 Diagram of the control flow
+### R8 Diagram of the control flow
 
 ![avatar](docs/Activity_Diagram.png)
+
+### R9 Implementation plan
+
+### R10 Help documentation
 
 ## Installation
 
