@@ -4,9 +4,9 @@ class RestaurantRepository
   attr_reader :database
   def initialize 
     pappaRich = Restaurant.new('Pappa Rich', 'Southern cross station, L1-CS-03', '3.5', '9')
-    kfc = Restaurant.new('Hungry Jack\'s', 'Spencer Street', '2.5', '9.5')
+    hungryJacks = Restaurant.new('Hungry Jack\'s', 'Spencer Street', '2.5', '9.5')
     grilld = Restaurant.new('Grill\'d', 'Southern cross station', '4', '17')
-    @database = [pappaRich, kfc, grilld]
+    @database = [pappaRich, hungryJacks, grilld]
   end
 
   def add(restaurant)
