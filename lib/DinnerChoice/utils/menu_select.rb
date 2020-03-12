@@ -25,6 +25,7 @@ def menu_select(restaurant_controller)
       # restaurant_controller.update
     elsif user_selection == '5' || user_selection == '5.'
       puts 'Make a choice! (random generator):'.colorize(:green)
+      restaurant_controller.dice
     else
       puts 'Sorry, I don\'t understand. Please select from 1 to 5.'
     end 

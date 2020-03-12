@@ -1,3 +1,3 @@
 def roll_dice(database)
-  #roll a dice
+  selected_resaurant = database.sample(1)
 end

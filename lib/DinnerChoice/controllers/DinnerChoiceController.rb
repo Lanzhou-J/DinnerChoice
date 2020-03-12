@@ -1,6 +1,7 @@
 require_relative '../utils/capitalize'
 require_relative '../models/Restaurants'
 require_relative '../utils/waiting_dot'
+require_relative '../utils/dice_roller'
 
 class Controller
   def initialize(restaurant_views, restaurant_repo) 
@@ -56,5 +57,20 @@ class Controller
   
   def menu_list
     @restaurant_views.menu_list
+  end
+
+  def dice
+    puts
+    waiting()
+    sleep 0.5
+    print "    ......".colorize(:green)
+    sleep 0.5
+    print "Dice rolling".colorize(:green)
+    sleep 0.5
+    puts "......".colorize(:green)
+    sleep 0.5
+    waiting()
+    selected_restaurant = roll_dice(@restaurant_repo.database)
+    @restaurant_views.index(selected_restaurant)
   end
 end
