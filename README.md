@@ -4,11 +4,11 @@
 
 
 
-### R4 Link to source control repository
+### Source control repository
 
 * https://github.com/Lanzhou-J/DinnerChoice
 
-### R5 Statement of purpose and scope
+### Statement of purpose and scope
 
 This gem (terminal app) is designed to record information (e.g. name(brand), address, average price) and user-reviews of different restaurants. Users are able to add restaurants entry, display restaurants in a list format, delete any restaurant and update their information. Users can rate the restaurant on a scale of 1-5, 1 being the lowest(poor), 5 being the highest(great). Moreover, the app can help users make quick lunch/dinner decisions (or help users reach a consensus easily). Users can "roll a dice" to get a random selection from the up-to-date restaurants list.
 
@@ -18,7 +18,7 @@ Have you ever spent too much time trying to make a decision as where to go for l
 
 With this app, you will be able to easily record, rate and compare different restaurants. When time is limited, or you are with lots of friends with different opinions and it is just too hard to decide your next dine out destination, just take a leap of faith and let the app make the decision for you.
 
-### R6 Features:
+### Features:
 * Ascii art text banner in terminal header.
 
 * Create your resaurants collections. <br>
@@ -34,7 +34,7 @@ With this app, you will be able to easily record, rate and compare different res
 
 * Make quick decisions.
 
-### R7 Outline of user interaction and experience
+### Outline of user interaction and experience
 
  * The user will find out how to interact with the terminal app by reading the contents of "<font color="#dddd00">MAIN MENU</font>". Then users can select from the main menu (input number, select from 1 to 6). By doing so, they can choose to use each feature. After executing a function, the main menu list will display again and ask the user to select again. User can leave the app by inputing '6' (or '6.', 'exit').
 
@@ -126,13 +126,13 @@ The restaurant is successfully edited!
 * Once "Make a choice" function is selected, the app will randomly select a restaurant from the current restaurants list. The restaurant will then be displayed with all the information.
 
 
-### R8 Diagram of the control flow
+### Diagram of the control flow
 
 ![avatar](docs/Activity_Diagram.png)
 
-### R9 Implementation plan
-
-### R10 Help documentation
+### Implementation plan
+Please refer to my Trello board
+### Help documentation
 
 ## Installation
 
@@ -151,8 +151,6 @@ Or install it yourself as:
     $ gem install DinnerChoice
 
 ## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
