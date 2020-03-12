@@ -2,6 +2,7 @@ require_relative '../utils/capitalize'
 require_relative '../models/Restaurants'
 require_relative '../utils/waiting_dot'
 require_relative '../utils/dice_roller'
+require_relative '../utils/error'
 
 class Controller
   def initialize(restaurant_views, restaurant_repo) 
@@ -38,8 +39,18 @@ class Controller
   end
 
   def remove
-    remove_index = @restaurant_views.delete_command
-    delete_index(remove_index)
+    if @restaurant_repo.database == []
+      puts 
+      puts "List is empty, nothing to delete.".colorize(:red)
+    else
+      remove_index = @restaurant_views.delete_command
+      if (remove_index < 0) || (remove_index > (@restaurant_repo.database.count - 1))
+        error_message()
+        puts "Please select ID from the existing restaurants list."
+      else
+        delete_index(remove_index)
+      end
+    end
   end
 
   def update_info(update_index, select_item, update_content)

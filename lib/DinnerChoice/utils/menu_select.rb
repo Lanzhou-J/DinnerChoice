@@ -1,5 +1,6 @@
 # require_relative "../utils/menu_list"
 require_relative "../utils/line_separator"
+require_relative "../utils/error"
 require_relative "../../DinnerChoice/controllers/DinnerChoiceController"
 
 def menu_select(restaurant_controller)
@@ -24,7 +25,8 @@ def menu_select(restaurant_controller)
       puts 'Make a choice! (random generator):'.colorize(:green)
       restaurant_controller.dice
     else
-      puts "Sorry, I don\'t understand. Please select from 1 to 6, or input 'exit'."
+      error_message()
+      puts "Please select from 1 to 6, or input 'exit'."
     end 
     line_separator()
     user_selection = restaurant_controller.menu_list
