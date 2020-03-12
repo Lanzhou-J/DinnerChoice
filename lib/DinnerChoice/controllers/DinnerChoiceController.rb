@@ -61,8 +61,21 @@ class Controller
   end
 
   def rewrite
-    update_array = @restaurant_views.update_command
-    update_info(update_array[0], update_array[1], update_array[2])
+    if @restaurant_repo.database == []
+      puts 
+      puts "List is empty, nothing to update.".colorize(:red)
+      puts "Select 1 if you want to add a new entry."
+    else
+      update_index = @restaurant_views.update_index
+      
+      if (update_index < 0) || (update_index > (@restaurant_repo.database.count - 1))
+        error_message()
+        puts "Please select ID from the existing restaurants list."
+      else
+        update_array = @restaurant_views.update_command
+        update_info(update_index, update_array[0], update_array[1])
+      end
+    end
   end
   
   def menu_list
