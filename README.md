@@ -89,11 +89,31 @@ Average Price: $17
 * After adding a new entry, the added restaurant will be appended to the bottom of the list with a new automatically generated ID.
 
 ##### 3. Delete an existing entry
-
+* The app will ask the user to select which restaurant to delete from the list (by selecting their ID).
+```
+Which restaurant do you want to delete from the list? Please input the ID number:
+> 
+```
+* After deleting an existing entry, the ID of restaurants will automatically changed according to the latest order. The app will calculate if the list count has decreased by 1, if yes, then output a message telling users that the entry has been successfully deleted:
+```
+> > > > > > > > > > > > > > > > > > 
+The restaurant is successfully deleted!
+```
 ##### 4. Update info
+* The app will interact with users by asking which restaurant do they want to edit:
+```
+Which restaurant do you want to edit? Please input the ID number:
+> 2
+Which feature do you want to edit? Please select from name/address/rating/price:
+> rating
+Please input new content:
+> 3
+> > > > > > > > > > > > > > > > > > 
+The restaurant is successfully edited!
+```
 
 ##### 5. Make a choice!
-
+* Once "Make a choice" function is selected, the app will randomly select a restaurant from the current restaurants list. The restaurant will then be displayed with all the information.
 
 
 #### R8 Diagram of the control flow
