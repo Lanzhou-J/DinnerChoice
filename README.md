@@ -131,7 +131,10 @@ The restaurant is successfully edited!
 ![avatar](docs/Activity_Diagram.png)
 
 ### Implementation plan
-Please refer to my Trello board
+Please refer to my [Trello board][board].
+
+[board]: https://trello.com/b/sG3Qx1Wr/dinnerchoiceterminal-app "Trello board"
+
 ### Help documentation
 
 ## Installation
