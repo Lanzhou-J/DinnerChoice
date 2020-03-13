@@ -54,9 +54,22 @@ Please select from the MAIN MENU (select numbers 1 to 6):
 See you next time!
 ```
 
-* Error handling: when input wrong selection (e.g. '7', '9' or other numbers/letters), the app will output an error message an ask the user to select from the menu again.<br>
+* Error handling: When selecting functions from <font color="#dddd00">MAIN MENU</font>, if users input wrong selection (e.g. '7', '9' or other numbers/letters), the app will output an error message an ask the user to select from the menu again.<br>
 ```
-Sorry, I don't understand. Please select from 1 to 6.
+? ? ? ? ? ? ? ?
+Sorry I don't understand...
+Please select from 1 to 6, or input 'exit'.
+```
+* Error handling: Similarly, if users input wrong ID number to delete or update a restaurant entry, the app will output an error message and give users advice:<br>
+```
+? ? ? ? ? ? ? ?
+Sorry I don't understand...
+Please select ID from the existing restaurants list.
+```
+
+* Error handling: If users select delete or update function but the restaurants list is empty, the app will tell the user that the list is empty:<br>
+```
+List is empty, nothing to delete.
 ```
 
 ##### 1. Create new entry: 
