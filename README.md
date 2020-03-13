@@ -155,7 +155,7 @@ Please refer to my [Trello board][board].
 
 #### 1. Install ruby:
 
-* Install Homebrew: <br>
+* Install Homebrew (for MacOS users): <br>
 Homebrew is a package manager for Mac. It will allow us to easily install ruby. Run the following command in terminal:
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -245,6 +245,10 @@ Then you should be able to use the DinnerChoice app!
 $ gem uninstall DinnerChoice
 Successfully uninstalled DinnerChoice 0.1.1
 ```
+#### 5. For Linux and windows users
+* For Linux users, please follow [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04) to install ```rbenv```. Other steps are similar to the steps mentioned above.
+
+* For windows users, you need to use a virtual machine to run [Ubuntu](https://ubuntu.com/), you can use some software called [VMware Workstation](https://www.vmware.com/products/workstation-pro.html). This will allow you to run the Ubuntu OS virtually. Once succeeded, follow the previous guide to install rbenv and Gem.
 
 ## Usage
 ### Help documentation
@@ -290,3 +294,6 @@ Everyone interacting in the DinnerChoice project's codebases, issue trackers, ch
 * Vector Illustration https://undraw.co/illustrations
 * [Restaurants near Southern Cross station](https://www.zomato.com/melbourne/fast-food?group_id=31153)
 * [An introduction of decidophobia](https://www.bustle.com/articles/157828-5-signs-you-might-have-decidophobia-or-fear-of-making-decisions)
+* [How To Install Ruby on Rails with rbenv on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04)
+* [Ubuntu](https://ubuntu.com/)
+* [vmware](https://www.vmware.com/products/workstation-pro.html)
