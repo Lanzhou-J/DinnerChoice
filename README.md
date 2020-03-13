@@ -38,7 +38,7 @@ Users can delete any entry from the existing restaurants list. The ID of the res
 
 ### Outline of user interaction and experience
 
- * The user will find out how to interact with the terminal app by reading the contents of "<font color="#dddd00">MAIN MENU</font>". Then users can select from the main menu (input number, select from 1 to 6). By doing so, they can choose to use each feature. After executing a function, the main menu list will display again and ask the user to select again. User can leave the app by inputing '6' (or '6.', 'exit').
+ * The user will find out how to interact with the terminal app by reading the contents of "<font color="#dddd00">MAIN MENU</font>". Then users can select from the main menu (input number, select from 1 to 6). By doing so, they can choose to use each feature. After executing a function, the main menu list will display again and ask the user to select again. User can leave the app by inputing '6' (or '6.', 'exit').<br>
 
  ```
 MAIN MENU
@@ -54,7 +54,7 @@ Please select from the MAIN MENU (select numbers 1 to 6):
 See you next time!
 ```
 
-* Error handling: when input wrong selection (e.g. '7', '9' or other numbers/letters), the app will output an error message an ask the user to select from the menu again.
+* Error handling: when input wrong selection (e.g. '7', '9' or other numbers/letters), the app will output an error message an ask the user to select from the menu again.<br>
 ```
 Sorry, I don't understand. Please select from 1 to 6.
 ```
@@ -71,13 +71,14 @@ How do you like this restaurant? please rate on a scale of 1-5, 1 being the lowe
 How much do you usually spend in this restaurant?
 > 
 ```
-* After adding a new restaurant, the app will calculate if the list count has increased by 1, if yes, then output a message telling users that the new entry has been successfully added.
+* After adding a new restaurant, the app will calculate if the list count has increased by 1, if yes, then output a message telling users that the new entry has been successfully added.<br>
 ```
 > > > > > > > > > > > > > > > > > > 
 New restaurant is successfully added!
 ```
 ##### 2. Display restaurants
-* If nothing is added to the default restaurants list, the default restaurants list will be displayed as below:
+* If nothing is added to the default restaurants list, the default restaurants list will be displayed as below:<bt>
+
 ```
 -------------------------
 ID: 1
@@ -101,18 +102,18 @@ Average Price: $17
 ```
 
 ##### 3. Delete an existing entry
-* The app will ask the user to select which restaurant to delete from the list (by selecting their ID).
+* The app will ask the user to select which restaurant to delete from the list (by selecting their ID).<br>
 ```
 Which restaurant do you want to delete from the list? Please input the ID number:
 > 
 ```
-* After deleting an existing entry, the app will calculate if the list count has decreased by 1, if yes, then output a message telling users that the entry has been successfully deleted:
+* After deleting an existing entry, the app will calculate if the list count has decreased by 1, if yes, then output a message telling users that the entry has been successfully deleted:<bt>
 ```
 > > > > > > > > > > > > > > > > > > 
 The restaurant is successfully deleted!
 ```
 ##### 4. Update info
-* The app will interact with users by asking which restaurant do they want to edit:
+* The app will interact with users by asking which restaurant do they want to edit:<br>
 ```
 Which restaurant do you want to edit? Please input the ID number:
 > 2
@@ -186,6 +187,8 @@ If you see this message (or similar message containing ```2.7.0```) in terminal,
 ```
 ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-darwin18]
 ```
+
+REQUIRED RUBY VERSION: ```>= 2.3.0```
 #### 2. Install Gem
 
 * You can find the gem ```DinnerChoice 0.1.1``` on rubygems.org --  see link: [DinnerChoice](https://rubygems.org/gems/DinnerChoice)
@@ -223,7 +226,7 @@ irb(main):001:0> require "DinnerChoice"
 
 
 Then you should be able to use the DinnerChoice app!
-#### 4. Uninstall Gem
+#### 5. Uninstall Gem
 * The uninstall command removes the gems you have installed.
 ```
 $ gem uninstall DinnerChoice
@@ -232,7 +235,24 @@ Successfully uninstalled DinnerChoice 0.1.1
 
 ## Usage
 ### Help documentation
+Please also see the "Outline of user interaction and experience" section.
 
+In order to use it users need to select the options displayed in <font color="#dddd00">MAIN MENU</font> (select number from 1 to 6, or input "exit" to leave the app).
+
+1. Create new restaurant entry:<br> 
+In order to create a new restaurant, users need to input "1", and then add name, address, rating and average meal price. If the entry is successfully added, a message will tell the user that a new entry is successfully added.
+
+2. Display restaurants list: <br>
+If users select "2", the default restaurants list will appear on screen which allow the users to review and compare the restaurants.
+
+3. Delete an existing restaurant entry:<br>
+In order to delete an entry, users need to input the ID of the restaurant that needs to be deleted. If nothing is in the list, the app will tell the user that nothing is in the list.
+
+4. Update an existing restaurant entry:<br>
+When selected the "Update info" selection (number 4) in <font color="#dddd00">MAIN MENU</font>, the app will ask the users to input the ID of the restaurant that needs to be updated and input the specific attribute, new content of the attribute in order to update information.
+
+5. Make a choice from the existing restaurants list:<br>
+Once "Make a choice" function is selected, the app will display a randomly selected item from the current restaurants list.
 
 ## Tests
 I used manual testing to test my app. You can find a spreadsheet in Google file:
