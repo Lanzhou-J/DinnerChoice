@@ -1,6 +1,6 @@
 # DinnerChoice
 
-![avatar](docs/Dinner_choice.png)
+![avatar](./docs/Dinner_choice.png)
 
 ### Source control repository
 
@@ -21,15 +21,18 @@ With this app, you will be able to easily record, rate and compare different res
 ![avatar](docs/Ascii_art_banner.png)
 
 * Create your resaurants collections. <br>
-(After adding a new entry, the added restaurant will be appended to the bottom of the list with a new automatically generated ID.)
+Users are able to create a new restaurant entry to record information related to the restaurant, including name(brand), location, price and their rating of the restaurant. After adding a new entry, the added restaurant will be appended to the bottom of the list with a new automatically generated ID.
 
-* View name, address and price of restaurants -- information that you need to choose a restaurant for dine out.
+* View name, address and price of restaurants -- information that you need to choose a restaurant for dine out. <br>
+Users are able to select display function to view all restaurant entries in the current list. After editing (add, delete or update) the list displayed will change accordingly.
 
 * Rate and review restaurants that you have been visited before.
-* Update restaurants' information easily.
+
+* Update restaurants' information easily.<br>
+  Users are able to select which restaurant to edit and which attribute they want to change (name/ address/ rating and average price). Then they can input the new content of the attribute to overwrite the previous information. 
 
 * Delete any restaurant from you list. <br>
-(The ID of the restaurants in the list will automatically changed according to the latest order.)
+Users can delete any entry from the existing restaurants list. The ID of the restaurants in the list will automatically changed according to the latest order. However if there is nothing in the list the app will output an error message to remind the user to select function from main menu again.
 
 * Make quick decisions.
 
@@ -134,7 +137,6 @@ Please refer to my [Trello board][board].
 
 [board]: https://trello.com/b/sG3Qx1Wr/dinnerchoiceterminal-app "Trello board"
 
-### Help documentation
 
 ## Installation
 
@@ -163,6 +165,11 @@ Or install it yourself as:
     $ gem install DinnerChoice
 
 ## Usage
+### Help documentation
+
+## Tests
+I used manual testing to test my app. You can find a spreadsheet in Google file:
+[Test case spreadsheet](https://docs.google.com/spreadsheets/d/16QYt6_DTL253NrGNKjdTA68KubFQsKqMnZYYm90FH2g/edit?usp=sharing)
 
 ## Development
 
