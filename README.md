@@ -233,6 +233,7 @@ Successfully uninstalled DinnerChoice 0.1.1
 ## Usage
 ### Help documentation
 
+
 ## Tests
 I used manual testing to test my app. You can find a spreadsheet in Google file:
 [Test case spreadsheet](https://docs.google.com/spreadsheets/d/16QYt6_DTL253NrGNKjdTA68KubFQsKqMnZYYm90FH2g/edit?usp=sharing)

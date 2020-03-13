@@ -1,6 +1,7 @@
 # require_relative "../utils/menu_list"
 require_relative "../utils/line_separator"
 require_relative "../utils/error"
+require_relative "../utils/artii"
 require_relative "../../DinnerChoice/controllers/DinnerChoiceController"
 
 def menu_select(restaurant_controller)
@@ -32,5 +33,6 @@ def menu_select(restaurant_controller)
     user_selection = restaurant_controller.menu_list
   end
   puts 'See you next time!'
+  artii('Bye!')
   exit
 end
