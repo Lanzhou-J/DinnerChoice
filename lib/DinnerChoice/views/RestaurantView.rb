@@ -62,7 +62,7 @@ class RestaurantViews
   def menu_list()
     puts 'main menu'.upcase.colorize(:light_yellow)
     puts '1. Create a new restaurant entry'
-    puts '2. Display or search restaurants by key words'
+    puts '2. Display restaurants list'
     puts '3. Delete an existing entry'
     puts '4. Update info of an existing entry'
     puts '5. Make a choice! (random generator)'

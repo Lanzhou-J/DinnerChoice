@@ -127,7 +127,6 @@ The restaurant is successfully edited!
 ##### 5. Make a choice!
 * Once "Make a choice" function is selected, the app will randomly select a restaurant from the current restaurants list. The restaurant will then be displayed with all the information.
 
-
 ### Diagram of the control flow
 
 ![avatar](docs/Plan_UML_Chart.png)
@@ -140,29 +139,96 @@ Please refer to my [Trello board][board].
 
 ## Installation
 
-1. Install ruby:
+#### 1. Install ruby:
+
+* Install Homebrew: <br>
+Homebrew is a package manager for Mac. It will allow us to easily install ruby. Run the following command in terminal:
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 * You need to install ruby to run this app. To verify you have ruby installed on your machine run:
 ```
 ruby -v
 ```
-* if you get no result from this command ruby isn't installed. There are many ways to install ruby but i recommend using rbenv.
+* If you get no result from this command ruby isn't installed. There are many ways to install ruby but i recommend using rbenv.
 
-2. ...
+* rbenv is a great Ruby version manager. We will use it to install and manage different versions of ```Ruby```.
 
-Add this line to your application's Gemfile:
+* Install ```rbenv``` using Homebrew:
+```
+brew install rbenv
+```
+* Set up ```rbenv``` in shell by running command below:
+```
+rbenv init
+```
+* Close terminal and open a new terminal window
+* Verify that ```rbenv``` is setup properly by running the ```rbenv-doctor``` script
+```
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+```
+* Ruby installation, run the following code:
+```
+rbenv install 2.7.0
+```
+* This will install a version of Ruby on your computer.
+
+* In order to use ```2.7.0``` globally on your computer, you need to run the following command:
+```
+rbenv global 2.7.0
+```
+* Run the following command to check if ruby is installed properly:
+```
+ruby -v
+```
+If you see this message (or similar message containing ```2.7.0```) in terminal, you have installed Ruby successfully.
+```
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-darwin18]
+```
+#### 2. Install Gem
+
+* You can find the gem ```DinnerChoice 0.1.1``` on rubygems.org --  see link: [DinnerChoice](https://rubygems.org/gems/DinnerChoice)
+
+
+* Add this line to your application's Gemfile:
 
 ```ruby
 gem 'DinnerChoice'
 ```
 
-And then execute:
+* And then execute:
+```
+$ bundle install
+```
+* Or install it yourself as:
+```
+$ gem install DinnerChoice
+```
 
-    $ bundle install
+#### 3. Listing installed Gems
+* You can use ```gem list``` command to view all the gems that have been installed in the computer.
+```
+$ gem list
+```
+* All the gems that you have installed before should appear in terminal window.
 
-Or install it yourself as:
+#### 4. Using Gem
 
-    $ gem install DinnerChoice
+* In terminal window, enter into irb by inputing "irb" and press Enter, then require gem:
+```
+$ irb
+irb(main):001:0> require "DinnerChoice"
+```
+
+
+Then you should be able to use the DinnerChoice app!
+#### 4. Uninstall Gem
+* The uninstall command removes the gems you have installed.
+```
+$ gem uninstall DinnerChoice
+Successfully uninstalled DinnerChoice 0.1.1
+```
 
 ## Usage
 ### Help documentation
@@ -188,4 +254,5 @@ Everyone interacting in the DinnerChoice project's codebases, issue trackers, ch
 ## Reference
 
 * Vector Illustration https://undraw.co/illustrations
-* An introduction of decidophobia https://www.bustle.com/articles/157828-5-signs-you-might-have-decidophobia-or-fear-of-making-decisions
+* [Restaurants near Southern Cross station](https://www.zomato.com/melbourne/fast-food?group_id=31153)
+* [An introduction of decidophobia](https://www.bustle.com/articles/157828-5-signs-you-might-have-decidophobia-or-fear-of-making-decisions)
