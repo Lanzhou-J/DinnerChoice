@@ -1,8 +1,6 @@
 # DinnerChoice
 
-![avatar](docs/Dinner_choice.png)
-
-
+![avatar](./docs/Dinner_choice.png)
 
 ### Source control repository
 
@@ -20,23 +18,27 @@ With this app, you will be able to easily record, rate and compare different res
 
 ### Features:
 * Ascii art text banner in terminal header.
+![avatar](docs/Ascii_art_banner.png)
 
 * Create your resaurants collections. <br>
-(After adding a new entry, the added restaurant will be appended to the bottom of the list with a new automatically generated ID.)
+Users are able to create a new restaurant entry to record information related to the restaurant, including name(brand), location, price and their rating of the restaurant. After adding a new entry, the added restaurant will be appended to the bottom of the list with a new automatically generated ID.
 
-* View name, address and price of restaurants -- information that you need to choose a restaurant for dine out.
+* View name, address and price of restaurants -- information that you need to choose a restaurant for dine out. <br>
+Users are able to select display function to view all restaurant entries in the current list. After editing (add, delete or update) the list displayed will change accordingly.
 
 * Rate and review restaurants that you have been visited before.
-* Update restaurants' information easily.
+
+* Update restaurants' information easily.<br>
+  Users are able to select which restaurant to edit and which attribute they want to change (name/ address/ rating and average price). Then they can input the new content of the attribute to overwrite the previous information. 
 
 * Delete any restaurant from you list. <br>
-(The ID of the restaurants in the list will automatically changed according to the latest order.)
+Users can delete any entry from the existing restaurants list. The ID of the restaurants in the list will automatically changed according to the latest order. However if there is nothing in the list the app will output an error message to remind the user to select function from main menu again.
 
 * Make quick decisions.
 
 ### Outline of user interaction and experience
 
- * The user will find out how to interact with the terminal app by reading the contents of "<font color="#dddd00">MAIN MENU</font>". Then users can select from the main menu (input number, select from 1 to 6). By doing so, they can choose to use each feature. After executing a function, the main menu list will display again and ask the user to select again. User can leave the app by inputing '6' (or '6.', 'exit').
+ * The user will find out how to interact with the terminal app by reading the contents of "<font color="#dddd00">MAIN MENU</font>". Then users can select from the main menu (input number, select from 1 to 6). By doing so, they can choose to use each feature. After executing a function, the main menu list will display again and ask the user to select again. User can leave the app by inputing '6' (or '6.', 'exit').<br>
 
  ```
 MAIN MENU
@@ -52,9 +54,22 @@ Please select from the MAIN MENU (select numbers 1 to 6):
 See you next time!
 ```
 
-* Error handling: when input wrong selection (e.g. '7', '9' or other numbers/letters), the app will output an error message an ask the user to select from the menu again.
+* Error handling: When selecting functions from <font color="#dddd00">MAIN MENU</font>, if users input wrong selection (e.g. '7', '9' or other numbers/letters), the app will output an error message an ask the user to select from the menu again.<br>
 ```
-Sorry, I don't understand. Please select from 1 to 6.
+? ? ? ? ? ? ? ?
+Sorry I don't understand...
+Please select from 1 to 6, or input 'exit'.
+```
+* Error handling: Similarly, if users input wrong ID number to delete or update a restaurant entry, the app will output an error message and give users advice:<br>
+```
+? ? ? ? ? ? ? ?
+Sorry I don't understand...
+Please select ID from the existing restaurants list.
+```
+
+* Error handling: If users select delete or update function but the restaurants list is empty, the app will tell the user that the list is empty:<br>
+```
+List is empty, nothing to delete.
 ```
 
 ##### 1. Create new entry: 
@@ -69,13 +84,14 @@ How do you like this restaurant? please rate on a scale of 1-5, 1 being the lowe
 How much do you usually spend in this restaurant?
 > 
 ```
-* After adding a new restaurant, the app will calculate if the list count has increased by 1, if yes, then output a message telling users that the new entry has been successfully added.
+* After adding a new restaurant, the app will calculate if the list count has increased by 1, if yes, then output a message telling users that the new entry has been successfully added.<br>
 ```
 > > > > > > > > > > > > > > > > > > 
 New restaurant is successfully added!
 ```
 ##### 2. Display restaurants
-* If nothing is added to the default restaurants list, the default restaurants list will be displayed as below:
+* If nothing is added to the default restaurants list, the default restaurants list will be displayed as below:<bt>
+
 ```
 -------------------------
 ID: 1
@@ -99,18 +115,18 @@ Average Price: $17
 ```
 
 ##### 3. Delete an existing entry
-* The app will ask the user to select which restaurant to delete from the list (by selecting their ID).
+* The app will ask the user to select which restaurant to delete from the list (by selecting their ID).<br>
 ```
 Which restaurant do you want to delete from the list? Please input the ID number:
 > 
 ```
-* After deleting an existing entry, the app will calculate if the list count has decreased by 1, if yes, then output a message telling users that the entry has been successfully deleted:
+* After deleting an existing entry, the app will calculate if the list count has decreased by 1, if yes, then output a message telling users that the entry has been successfully deleted:<bt>
 ```
 > > > > > > > > > > > > > > > > > > 
 The restaurant is successfully deleted!
 ```
 ##### 4. Update info
-* The app will interact with users by asking which restaurant do they want to edit:
+* The app will interact with users by asking which restaurant do they want to edit:<br>
 ```
 Which restaurant do you want to edit? Please input the ID number:
 > 2
@@ -125,35 +141,140 @@ The restaurant is successfully edited!
 ##### 5. Make a choice!
 * Once "Make a choice" function is selected, the app will randomly select a restaurant from the current restaurants list. The restaurant will then be displayed with all the information.
 
-
 ### Diagram of the control flow
 
-![avatar](docs/Activity_Diagram.png)
+![avatar](docs/Plan_UML_Chart.png)
 
 ### Implementation plan
+![avatar](docs/Trello_board.png)
 Please refer to my [Trello board][board].
 
 [board]: https://trello.com/b/sG3Qx1Wr/dinnerchoiceterminal-app "Trello board"
 
-### Help documentation
 
 ## Installation
 
-Add this line to your application's Gemfile:
+#### 1. Install ruby:
+
+* Install Homebrew (for MacOS users): <br>
+Homebrew is a package manager for Mac. It will allow us to easily install ruby. Run the following command in terminal:
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+* You need to install ruby to run this app. To verify you have ruby installed on your machine run:
+```
+ruby -v
+```
+* If you get no result from this command ruby isn't installed. There are many ways to install ruby but i recommend using rbenv.
+
+* rbenv is a great Ruby version manager. We will use it to install and manage different versions of ```Ruby```.
+
+* Install ```rbenv``` using Homebrew:
+```
+brew install rbenv
+```
+* Set up ```rbenv``` in shell by running command below:
+```
+rbenv init
+```
+* Close terminal and open a new terminal window
+* Verify that ```rbenv``` is setup properly by running the ```rbenv-doctor``` script
+```
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+```
+* Ruby installation, run the following code:
+```
+rbenv install 2.7.0
+```
+* This will install a version of Ruby on your computer.
+
+* In order to use ```2.7.0``` globally on your computer, you need to run the following command:
+```
+rbenv global 2.7.0
+```
+* Run the following command to check if ruby is installed properly:
+```
+ruby -v
+```
+If you see this message (or similar message containing ```2.7.0```) in terminal, you have installed Ruby successfully.
+```
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-darwin18]
+```
+
+REQUIRED RUBY VERSION: ```>= 2.3.0```
+#### 2. Install Gem
+
+* You can find the gem ```DinnerChoice 0.1.1``` on rubygems.org --  see link: [DinnerChoice](https://rubygems.org/gems/DinnerChoice)
+
+
+* Add this line to your application's Gemfile:
 
 ```ruby
 gem 'DinnerChoice'
 ```
 
-And then execute:
+* And then execute:
+```
+$ bundle install
+```
+* Or install it yourself as:
+```
+$ gem install DinnerChoice
+```
 
-    $ bundle install
+#### 3. Listing installed Gems
+* You can use ```gem list``` command to view all the gems that have been installed in the computer.
+```
+$ gem list
+```
+* All the gems that you have installed before should appear in terminal window.
 
-Or install it yourself as:
+#### 4. Using Gem
 
-    $ gem install DinnerChoice
+* In terminal window, enter into irb by inputing "irb" and press Enter, then require gem:
+```
+$ irb
+irb(main):001:0> require "DinnerChoice"
+```
+
+
+Then you should be able to use the DinnerChoice app!
+#### 5. Uninstall Gem
+* The uninstall command removes the gems you have installed.
+```
+$ gem uninstall DinnerChoice
+Successfully uninstalled DinnerChoice 0.1.1
+```
+#### 5. For Linux and windows users
+* For Linux users, please follow [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04) to install ```rbenv```. Other steps are similar to the steps mentioned above.
+
+* For windows users, you need to use a virtual machine to run [Ubuntu](https://ubuntu.com/), you can use some software called [VMware Workstation](https://www.vmware.com/products/workstation-pro.html). This will allow you to run the Ubuntu OS virtually. Once succeeded, follow the previous guide to install rbenv and Gem.
 
 ## Usage
+### Help documentation
+Please also see the "Outline of user interaction and experience" section.
+
+In order to use it users need to select the options displayed in <font color="#dddd00">MAIN MENU</font> (select number from 1 to 6, or input "exit" to leave the app).
+
+1. Create new restaurant entry:<br> 
+In order to create a new restaurant, users need to input "1", and then add name, address, rating and average meal price. If the entry is successfully added, a message will tell the user that a new entry is successfully added.
+
+2. Display restaurants list: <br>
+If users select "2", the default restaurants list will appear on screen which allow the users to review and compare the restaurants.
+
+3. Delete an existing restaurant entry:<br>
+In order to delete an entry, users need to input the ID of the restaurant that needs to be deleted. If nothing is in the list, the app will tell the user that nothing is in the list.
+
+4. Update an existing restaurant entry:<br>
+When selected the "Update info" selection (number 4) in <font color="#dddd00">MAIN MENU</font>, the app will ask the users to input the ID of the restaurant that needs to be updated and input the specific attribute, new content of the attribute in order to update information.
+
+5. Make a choice from the existing restaurants list:<br>
+Once "Make a choice" function is selected, the app will display a randomly selected item from the current restaurants list.
+
+## Tests
+I used manual testing to test my app. You can find a spreadsheet in Google file:
+[Test case spreadsheet](https://docs.google.com/spreadsheets/d/16QYt6_DTL253NrGNKjdTA68KubFQsKqMnZYYm90FH2g/edit?usp=sharing)
 
 ## Development
 
@@ -172,4 +293,8 @@ Everyone interacting in the DinnerChoice project's codebases, issue trackers, ch
 ## Reference
 
 * Vector Illustration https://undraw.co/illustrations
-* An introduction of decidophobia https://www.bustle.com/articles/157828-5-signs-you-might-have-decidophobia-or-fear-of-making-decisions
+* [Restaurants near Southern Cross station](https://www.zomato.com/melbourne/fast-food?group_id=31153)
+* [An introduction of decidophobia](https://www.bustle.com/articles/157828-5-signs-you-might-have-decidophobia-or-fear-of-making-decisions)
+* [How To Install Ruby on Rails with rbenv on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04)
+* [Ubuntu](https://ubuntu.com/)
+* [vmware](https://www.vmware.com/products/workstation-pro.html)

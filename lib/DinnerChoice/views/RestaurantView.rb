@@ -41,25 +41,28 @@ class RestaurantViews
     return delete_index
   end
 
-  def update_command
+  def update_index
     puts 
     puts "Which restaurant do you want to edit? Please input the ID number:"
     print "> "
     update_id = gets.chomp.to_i
     update_index = update_id - 1
+  end
+
+  def update_command
     puts "Which feature do you want to edit? Please select from name/address/rating/price:"
     print "> "
     select_item = gets.chomp.downcase
     puts "Please input new content:"
     print "> "
     update_content = gets.chomp
-    [update_index, select_item, update_content]
+    [select_item, update_content]
   end
 
   def menu_list()
     puts 'main menu'.upcase.colorize(:light_yellow)
     puts '1. Create a new restaurant entry'
-    puts '2. Display or search restaurants by key words'
+    puts '2. Display restaurants list'
     puts '3. Delete an existing entry'
     puts '4. Update info of an existing entry'
     puts '5. Make a choice! (random generator)'
