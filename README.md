@@ -146,6 +146,7 @@ The restaurant is successfully edited!
 ![avatar](docs/Plan_UML_Chart.png)
 
 ### Implementation plan
+![avatar](docs/Trello_board.png)
 Please refer to my [Trello board][board].
 
 [board]: https://trello.com/b/sG3Qx1Wr/dinnerchoiceterminal-app "Trello board"
